@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class coronaSceneManager : MonoBehaviour
 {
+    [SerializeField]
     private string scenetoload;
 
    public void changeScene() {
