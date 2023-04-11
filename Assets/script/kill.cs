@@ -1,25 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class kill : MonoBehaviour
 {
     public List<GameObject> bodyParts = new List<GameObject>();
     private int a=0;
-    
-    void Start()
-    {
-        
+    private int b=4;
+
+    void Start (){
+        b=bodyParts.Count;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P)){
-            Debug.Log ("ca marhe");
-           
+    public void launch(){
+         if (a==b){
+                Debug.Log("finit");
+                SceneManager.LoadScene("Fin");
+            }
+            
+        else{ Debug.Log ("ca marhe");
             bodyParts [a].GetComponent<Rigidbody2D>().simulated=true;
-            a=a+1;
-        }
+            a=a+1;}
+
     }
 }
+
+
+   

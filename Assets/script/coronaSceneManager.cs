@@ -10,5 +10,6 @@ public class coronaSceneManager : MonoBehaviour
 
    public void changeScene() {
     SceneManager.LoadScene(scenetoload);
+     
    }
 }
