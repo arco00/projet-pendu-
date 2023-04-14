@@ -10,7 +10,7 @@ public class test : MonoBehaviour
     public kill killer; 
     public TMP_Text Mots;
     private string mot="a";
-    public TestAlphabet Test;
+    private TestAlphabet Test;
 
    void Start()
     {
