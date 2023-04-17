@@ -7,17 +7,20 @@ public class test : MonoBehaviour
 {
 
  
-    public kill killer; 
+    private kill killer; 
     public TMP_Text Mots;
     private string mot="a";
     private TestAlphabet Test;
+    private AfficherMot Afficher ;
 
    void Start()
     {
         mot=Mots.text;
         Test = GameObject.FindObjectOfType(typeof(TestAlphabet)) as TestAlphabet;
         killer = GameObject.FindObjectOfType(typeof(kill)) as kill;
+        
     }
+
   
       void OnGUI()
     {

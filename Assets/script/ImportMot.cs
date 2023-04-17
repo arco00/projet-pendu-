@@ -16,8 +16,8 @@ public class ImportMot : MonoBehaviour
     {
        
         newMot=NewMot.text;
-        spawnlettre spawn=GameObject.FindObjectOfType(typeof(spawnlettre))as spawnlettre;
-        newMot=spawn.mot;
+        Saver save=GameObject.FindObjectOfType(typeof(Saver))as Saver;
+        newMot=save.mot;
         NewMot.text=newMot;
         
     }

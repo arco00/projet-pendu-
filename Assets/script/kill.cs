@@ -7,13 +7,19 @@ public class kill : MonoBehaviour
 {
     public List<GameObject> bodyParts = new List<GameObject>();
     private int a=0;
-    private int b=4;
+    private int b;
     public GameObject destroyer ;
   
   //coor 1 et 2 et coef sont pour l'impuslion 
     private Vector2 coor1;
     private Vector2 coor2;
     public  float coefficient ;
+    public int critChance ;
+    public int missChance;
+     public GameObject critique ;
+     public GameObject miss;
+     private float time;
+     public float tempsAffichage;
     void Start (){
         b=bodyParts.Count;
         coor1=destroyer.GetComponent<Rigidbody2D>().transform.position;
@@ -22,19 +28,50 @@ public class kill : MonoBehaviour
     public void launch(){
          if (a==b){
                 Debug.Log("finit");
-                spawnlettre spawn=GameObject.FindObjectOfType(typeof(spawnlettre))as spawnlettre;
-                Destroy(spawn.gameObject);
+                Saver save=GameObject.FindObjectOfType(typeof(Saver))as Saver;
+                save.mot="";
                 SceneManager.LoadScene("Fin");
             }
             
         else{ Debug.Log ("ca marhe");
-            //activation de la physique
-            bodyParts [a].GetComponent<Rigidbody2D>().simulated=true;
+            float random=Random.Range(0,100);
+
+            if (random<=critChance){
+              damage();
+              damage();
+               critique.gameObject.SetActive(true);
+                time=0;
+            }
+            else if (random>=100-missChance){
+                miss.gameObject.SetActive(true);
+                time=0;
+            }
+            else {
+                damage();
+            }
+            }
+            
+            
+
+    }
+    public void damage(){
+        //activation de la physique
+             bodyParts [a].GetComponent<Rigidbody2D>().simulated=true;
             //impulsion 
             coor2=bodyParts [a].GetComponent<Rigidbody2D>().transform.position;
             bodyParts [a].GetComponent<Rigidbody2D>().AddForce((coor1+coor2)*coefficient);
-            a=a+1;}
+            a=a+1;
 
+    }
+    void Update(){
+        time=time+Time.deltaTime;
+        if (time>=tempsAffichage && (critique.gameObject.activeSelf || miss.gameObject.activeSelf))
+        {
+            //enlever le critique
+            critique.gameObject.SetActive(false);
+            miss.gameObject.SetActive(false);
+
+        }
     }
 }
 
