@@ -20,6 +20,10 @@ public class kill : MonoBehaviour
      public GameObject miss;
      private float time;
      public float tempsAffichage;
+     public AudioSource critSound;
+     public AudioSource missSound;
+     public AudioSource dgmSound;
+     public AudioSource killSound;
     void Start (){
         b=bodyParts.Count;
         coor1=destroyer.GetComponent<Rigidbody2D>().transform.position;
@@ -27,6 +31,7 @@ public class kill : MonoBehaviour
 
     public void launch(){
          if (a==b){
+                killSound.Play();
                 Debug.Log("finit");
                 Saver save=GameObject.FindObjectOfType(typeof(Saver))as Saver;
                 save.mot="";
@@ -37,16 +42,19 @@ public class kill : MonoBehaviour
             float random=Random.Range(0,100);
 
             if (random<=critChance){
+                critSound.Play();
               damage();
               damage();
                critique.gameObject.SetActive(true);
                 time=0;
             }
             else if (random>=100-missChance){
+                missSound.Play();
                 miss.gameObject.SetActive(true);
                 time=0;
             }
             else {
+                
                 damage();
             }
             }
@@ -55,7 +63,8 @@ public class kill : MonoBehaviour
 
     }
     public void damage(){
-        //activation de la physique
+             dgmSound.Play();
+            //activation de la physique
              bodyParts [a].GetComponent<Rigidbody2D>().simulated=true;
             //impulsion 
             coor2=bodyParts [a].GetComponent<Rigidbody2D>().transform.position;

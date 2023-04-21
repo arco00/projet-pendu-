@@ -14,14 +14,16 @@ public class AfficherMot : MonoBehaviour
     private string motAffNew;
     private TestAlphabet Test;
     private char lettre;
+    public AudioSource victorySound;
 
     
-    // Start is called before the first frame update
+    
     void Start()
     {
         Test = GameObject.FindObjectOfType(typeof(TestAlphabet)) as TestAlphabet;
         mot=Mot.text;
         longueur=mot.Length;
+        // afficher le mot en tant que "-------"
         for (int x = 0; x < longueur; x++){
             motAff=motAff+"-";
         }
@@ -32,7 +34,7 @@ public class AfficherMot : MonoBehaviour
     { Event e = Event.current;
     if(e.keyCode!=KeyCode.None && e.type==EventType.KeyDown && Test.Alphabet())
         {
-           
+           //afficher les caractère corect du mot , garder les caractère incorrect en "-" 
             for (int x = 0; x < longueur; x++){
                    
                     if (e.keyCode.ToString()==mot.Substring(x,1)){
@@ -48,8 +50,10 @@ public class AfficherMot : MonoBehaviour
             MotAff.text=motAff;
 
             if (motAff==mot){
+                //test victoire
                 Saver save=GameObject.FindObjectOfType(typeof(Saver))as Saver;
                 save.mot="";
+                victorySound.Play();
 
                 SceneManager.LoadScene("victoire");
             }

@@ -27,7 +27,7 @@ public class LancementJeu : MonoBehaviour
         else if(save.optionGame=="List"){
             string[] mots = new string[]{"MANGER","BOISSON","SCORPION","ORNITHORYNQUE","ORQUES","TRAVAILS","COUPS","ROCHER","CAILLOUX","ORDINATEUR",
             "TELEVISION","VOITURE","MAISON","ARBRE","CHIEN","CHAT","TABLE","CHAISE","LIVRE","STYLO","MONTAGNE","OCEAN","AVION","TRAIN", "BATEAU","SOLEIL","LUNE","ETOILE","PLANETE",
-            "GALAXIE","UNIVERSE","MARS","JUPITER","SATURNE"};
+            "GALAXIE","UNIVERS","MARS","JUPITER","SATURNE","PTISITRUC","INCERTAIS","PATATE","MARCHEUR","ROQUETTE","BOISSON","TABLEAUX","HISTORIEN","PIN","MER","SALOPIN"};
             int val =Random.Range(0,mots.Length);
             save.mot=mots[val];
             Debug.Log("le mot de la liste est :" +save.mot);
