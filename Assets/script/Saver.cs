@@ -5,12 +5,12 @@ using UnityEngine;
 public class Saver : MonoBehaviour
 {
     public string mot="";
-    public string optionGame="Random";
+    public string optionGame="List";
+    public bool victory=true;
 
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-     
     }
 
 

@@ -189,7 +189,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &389891587
 GameObject:
@@ -287,7 +287,7 @@ RectTransform:
   - {fileID: 2066717654}
   - {fileID: 527629914}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -361,8 +361,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -475,7 +475,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1232436332
 MonoBehaviour:
@@ -502,6 +502,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91f2e5fe50266f64582c467da5cba593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mot: 
+  optionGame: Random
 --- !u!1 &1533924799
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,6 +588,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2046914896
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8257376298911810161, guid: 310e00e65f3fc6b4d9adf90a21ed2fc8, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257376298911810161, guid: 310e00e65f3fc6b4d9adf90a21ed2fc8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.5614138
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257376298911810161, guid: 310e00e65f3fc6b4d9adf90a21ed2fc8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.6924324
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257376298911810161, guid: 310e00e65f3fc6b4d9adf90a21ed2fc8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257376298911810161, guid: 310e00e65f3fc6b4d9adf90a21ed2fc8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257376298911810161, guid: 310e00e65f3fc6b4d9adf90a21ed2fc8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257376298911810161, guid: 310e00e65f3fc6b4d9adf90a21ed2fc8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257376298911810161, guid: 310e00e65f3fc6b4d9adf90a21ed2fc8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257376298911810161, guid: 310e00e65f3fc6b4d9adf90a21ed2fc8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257376298911810161, guid: 310e00e65f3fc6b4d9adf90a21ed2fc8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257376298911810161, guid: 310e00e65f3fc6b4d9adf90a21ed2fc8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257376298911810163, guid: 310e00e65f3fc6b4d9adf90a21ed2fc8, type: 3}
+      propertyPath: m_Name
+      value: journalblank_lrg
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 310e00e65f3fc6b4d9adf90a21ed2fc8, type: 3}
 --- !u!1001 &2066717653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -744,7 +803,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

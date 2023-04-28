@@ -43,6 +43,8 @@ public class ListLettreUsed : MonoBehaviour
             //punition de l'erreur
             if (ActiverPunition){
             killer.damage();
+            killer.dgmSound.Play();
+                 Debug.Log("dgmsound");
             Debug.Log("deja appuyé");}
         }
 

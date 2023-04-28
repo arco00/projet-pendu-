@@ -15,11 +15,16 @@ public class AfficherMot : MonoBehaviour
     private TestAlphabet Test;
     private char lettre;
     public AudioSource victorySound;
+    private float time ;
+    private bool victoire = false ;
+    private Saver save ;
+
 
     
     
     void Start()
     {
+        save=GameObject.FindObjectOfType(typeof(Saver))as Saver;
         Test = GameObject.FindObjectOfType(typeof(TestAlphabet)) as TestAlphabet;
         mot=Mot.text;
         longueur=mot.Length;
@@ -50,16 +55,23 @@ public class AfficherMot : MonoBehaviour
             MotAff.text=motAff;
 
             if (motAff==mot){
-                //test victoire
-                Saver save=GameObject.FindObjectOfType(typeof(Saver))as Saver;
-                save.mot="";
+                //test victoire  
                 victorySound.Play();
-
-                SceneManager.LoadScene("victoire");
+                time=0;
+                victoire=true;
+                save.victory=true;
             }
          }
             
 
+    }
+    void Update(){
+        time=time+Time.deltaTime;
+        if (time>=0.7 && victoire){
+            
+            SceneManager.LoadScene("Fin");
+        }
+        
     }
 }
 

@@ -12,6 +12,7 @@ public class test : MonoBehaviour
     private string mot="a";
     private TestAlphabet Test;
     private AfficherMot Afficher ;
+    public AudioSource lettreOkSound;
 
    void Start()
     {
@@ -31,6 +32,7 @@ public class test : MonoBehaviour
     
             if (mot.Contains(e.keyCode.ToString())){
                 Debug.Log("mot ok");
+                lettreOkSound.Play();
             }
 
             else{ 

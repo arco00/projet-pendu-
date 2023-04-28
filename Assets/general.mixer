@@ -166,7 +166,13 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: fe680d84cca6afa4faa4dcb785618188
+    name: VolumeFX
+  - guid: ae1355123edee21428aa15ae7e03f1a5
+    name: VolumeMaster
+  - guid: 82d8c572912ee2d49a0a6d2c7fb95b0a
+    name: VolumeMusic
   m_AudioMixerGroupViews:
   - guids:
     - 2f610fcc4492b0a4a9cf723b667ddec1
@@ -176,6 +182,8 @@ AudioMixerController:
     - 4e03c933c36955f47909db3d44ee62c6
     - aeb19197acbbcfb45896bb3ae90c44a8
     - d53b2a4aceab967429d52f788d836a61
+    - dfdc0f708e3ddf543b461c6e3c26f56c
+    - 2f6f098e9872a5843bdd2154c544d5ec
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -224,10 +232,27 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 83c09806654a7ba4aaccc84e4eb2e32f
   m_FloatValues:
-    82d8c572912ee2d49a0a6d2c7fb95b0a: -0.025776558
-    fe680d84cca6afa4faa4dcb785618188: -0.08374829
+    ae1355123edee21428aa15ae7e03f1a5: 0.04171297
+    82d8c572912ee2d49a0a6d2c7fb95b0a: 0.10800299
+    e3988a7257bbd8a479893821743705a1: 1
+    fe680d84cca6afa4faa4dcb785618188: 0.015793826
     8de88e089402e7141a1f7ada20947e06: 0.04171297
+    7bb6c89a532ecb54da3fd85c46c281a4: 1
   m_TransitionOverrides: {}
+--- !u!244 &1002024609134902950
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 2cb721e933b3f8341b10bd41ad11d2c3
+  m_EffectName: Attenuation
+  m_MixLevel: b06c8544ab4c9a14b8e903b0721703ae
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &1120245139528558282
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -289,6 +314,25 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!243 &6122795905586890343
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: LettreOk
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 2f6f098e9872a5843bdd2154c544d5ec
+  m_Children: []
+  m_Volume: 150e7b250454c1b46b8f60ffce91fa47
+  m_Pitch: cd348db28c6c1064887037376915531e
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 1002024609134902950}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!243 &6797856658360243143
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -304,6 +348,7 @@ AudioMixerGroupController:
   - {fileID: -5285883079749201510}
   - {fileID: -4292029277637472328}
   - {fileID: -979904026284235926}
+  - {fileID: 6122795905586890343}
   m_Volume: fe680d84cca6afa4faa4dcb785618188
   m_Pitch: e3988a7257bbd8a479893821743705a1
   m_Send: 00000000000000000000000000000000
