@@ -8,7 +8,7 @@ public class spawnlettre : MonoBehaviour
 {
     public TMP_Text lettre;
     private TestAlphabet Test;
-    public string mot;   
+    private string mot;   
     private int length ;
     private Saver save;
 
@@ -18,11 +18,10 @@ public class spawnlettre : MonoBehaviour
     void Start(){
         Test = GameObject.FindObjectOfType(typeof(TestAlphabet)) as TestAlphabet;
         save = GameObject.FindObjectOfType(typeof(Saver)) as Saver;
-        mot=lettre.text;
+        
     }
 
-    void Update() {
-     }
+
      public void OnGUI()
     {
         Event e = Event.current;
@@ -31,10 +30,11 @@ public class spawnlettre : MonoBehaviour
         
         if (e.keyCode!=KeyCode.None && e.type==EventType.KeyDown&&Test.Alphabet())
         {
-            Debug.Log("Detected key code: " + e.keyCode);
+            
             mot=mot+e.keyCode.ToString();
             lettre.text=mot;
             save.mot=mot;
+            Debug.Log("Detected key code: " + e.keyCode + "le mot est:" + save.mot);
         }
 
         //suppression du dernier caractère si backspace 
