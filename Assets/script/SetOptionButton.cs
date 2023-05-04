@@ -12,9 +12,5 @@ public class SetOptionButton : MonoBehaviour
         Debug.Log(save.optionGame);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
 }

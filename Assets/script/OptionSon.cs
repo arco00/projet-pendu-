@@ -13,6 +13,7 @@ public class OptionSon : MonoBehaviour
     public AudioMixer Mixer ;
     public string Group;
 
+ 
     public void  changementVol(){
         Mixer.SetFloat(Group,Mathf.Log10(slider.value)*20);
     }
